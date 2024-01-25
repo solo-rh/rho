@@ -27,7 +27,7 @@ lazy val `rho-core` = project
         case _ => Nil
       }
     },
-    libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0")
+    libraryDependencies ++= Seq("org.scala-lang.modules" %% "scala-collection-compat" % "2.8.1")
   )
 
 lazy val `rho-swagger` = project
@@ -111,7 +111,7 @@ lazy val license = (ThisBuild / licenses) := Seq(
 lazy val buildSettings = publishing ++
   Seq(
     scalaVersion := scala_213,
-    crossScalaVersions := Seq(scala_213, scala_212),
+    crossScalaVersions := Seq(scala_213),
     scalacOptions --= disabledCompilerFlags,
     resolvers ++= Seq(
       Resolver.sonatypeRepo("snapshots"),
